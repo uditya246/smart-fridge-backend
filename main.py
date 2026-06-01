@@ -269,3 +269,7 @@ def check_now():
 def test_notification():
     send_push("Smart Fridge Test", "Your notifications are working!")
     return {"success": True}
+
+# This helps Railway detect the correct port
+import os
+print(f"Starting on port: {os.environ.get('PORT', 8000)}")
